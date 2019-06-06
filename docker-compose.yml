@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  builded:
+    build:
+      context: .
+    depends_on:
+      - sleeper
+  sleeper:
+    image: alpine
+    command: sleep 36000
